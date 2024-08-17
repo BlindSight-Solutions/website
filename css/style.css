@@ -96,7 +96,7 @@
 }
 
 @media (max-width: 991.98px) {
-    .navbar-light .navbar-nav .nav-link  {
+    .navbar-light .navbar-nav .nav-link {
         margin-right: 0;
         padding: 10px 0;
     }
@@ -168,7 +168,7 @@
         position: relative;
         min-height: 500px;
     }
-    
+
     .header-carousel .owl-carousel-item img {
         position: absolute;
         width: 100%;
@@ -224,7 +224,7 @@
     background-size: cover;
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
     color: var(--light);
 }
 
@@ -235,19 +235,19 @@
         max-width: 100% !important;
     }
 
-    .about-text  {
+    .about-text {
         padding-right: calc(((100% - 960px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1200px) {
-    .about-text  {
+    .about-text {
         padding-right: calc(((100% - 1140px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1400px) {
-    .about-text  {
+    .about-text {
         padding-right: calc(((100% - 1320px) / 2) + .75rem);
     }
 }
@@ -259,19 +259,19 @@
         max-width: 100% !important;
     }
 
-    .feature-text  {
+    .feature-text {
         padding-left: calc(((100% - 960px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1200px) {
-    .feature-text  {
+    .feature-text {
         padding-left: calc(((100% - 1140px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1400px) {
-    .feature-text  {
+    .feature-text {
         padding-left: calc(((100% - 1320px) / 2) + .75rem);
     }
 }
@@ -399,19 +399,19 @@
         max-width: 100% !important;
     }
 
-    .contact-page .contact-form  {
+    .contact-page .contact-form {
         padding-left: calc(((100% - 960px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1200px) {
-    .contact-page .contact-form  {
+    .contact-page .contact-form {
         padding-left: calc(((100% - 1140px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1400px) {
-    .contact-page .contact-form  {
+    .contact-page .contact-form {
         padding-left: calc(((100% - 1320px) / 2) + .75rem);
     }
 }
@@ -509,7 +509,106 @@
 }
 
 .img-card {
-  width: 500px; /* Adjust according to your design */
-  height: 250px; /* Adjust according to your design */
-  object-fit: cover; /* Ensures the image covers the specified dimensions */
+    width: 500px;
+    /* Adjust according to your design */
+    height: 250px;
+    /* Adjust according to your design */
+    object-fit: cover;
+    /* Ensures the image covers the specified dimensions */
+}
+
+/* Image Slider */
+.image-slider {
+    max-width: 500px;
+    /* Reduced width for a more compact slider */
+    margin: 20px auto;
+    /* Reduced margin for a more snug fit */
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    /* Slightly smaller rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    /* Softer shadow */
+}
+
+.slider-images {
+    display: flex;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Slightly faster transition */
+}
+
+.slider-images img {
+    min-width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* Ensures images cover the container nicely */
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    /* Slightly smaller for compactness */
+    color: #444;
+    /* Slightly lighter for better balance */
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Higher opacity */
+    padding: 8px;
+    /* Smaller padding */
+    border-radius: 50%;
+    z-index: 1000;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    /* Faster hover effect */
+}
+
+.slider-arrow:hover {
+    background-color: rgba(255, 255, 255, 1);
+    /* Fully opaque on hover */
+}
+
+.left-arrow {
+    left: 15px;
+    /* Reduced space from the edges */
+}
+
+.right-arrow {
+    right: 15px;
+    /* Reduced space from the edges */
+}
+
+/* Image Gallery */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    /* Responsive grid layout */
+    gap: 15px;
+    /* Space between images */
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    /* Light gray background for contrast */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
+
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    /* Rounded corners for a cohesive look */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Light shadow for individual images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth hover effects */
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+    /* Slight zoom on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    /* Enhanced shadow on hover */
 }
